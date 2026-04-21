@@ -1,0 +1,7 @@
+{
+  "name": "react-design-patterns",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ]
+}
