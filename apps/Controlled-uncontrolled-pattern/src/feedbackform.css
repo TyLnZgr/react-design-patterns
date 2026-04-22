@@ -1,0 +1,34 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input,
+.textarea {
+  border: 1px solid #d1d5db; /* Tailwind gray-300 */
+  border-radius: 16px; /* rounded-2xl */
+  padding: 0.5rem; /* p-2 */
+  margin: 0.75rem 0; /* my-3 */
+  font-size: 1rem;
+  outline: none;
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: #a855f7;
+  box-shadow: 0 0 0 2px rgba(168, 85, 247, 0.2);
+}
+
+.button {
+  background-color: #a855f7; /* purple-500 */
+  color: white;
+  padding: 0.25rem 0.75rem; /* p-1 + biraz yatay denge */
+  border-radius: 4px; /* rounded */
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.button:hover {
+  background-color: #9333ea;
+}
