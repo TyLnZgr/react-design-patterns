@@ -1,41 +1,40 @@
-# ⚛️ React Design Patterns
+⚛️ React Design Patterns Monorepo
 
-Bu repo, React’te kullanılan yaygın **design pattern’leri** öğrenmek ve pratik etmek için hazırlanmıştır.
+Bu repository, React’te kullanılan yaygın design pattern’leri öğrenmek ve gerçek kullanım senaryoları üzerinden pratik etmek için hazırlanmıştır.
 
-Her pattern, tamamen **izole bir mini uygulama** olarak tasarlanmıştır. Amaç; pattern’in teorisini değil, gerçek kullanım senaryosunu göstermektir.
+Amaç yalnızca teoriyi göstermek değil, her pattern’i izole, çalışabilir ve üretim benzeri bir mini uygulama olarak deneyimlemektir.
 
----
+🧠 Yaklaşım
 
-## 📦 Proje Yapısı
+Her design pattern:
+
+Tamamen bağımsız bir uygulamadır
+Kendi Vite + React setup’ına sahiptir
+Diğer pattern’lerden izole çalışır
+Gerçek dünya kullanımına yakın şekilde tasarlanmıştır
+
 apps/
-├── builder-pattern/
 ├── container-presenter-pattern/
-├── render-props/
-├── compound-components/
-└── proxy-pattern/
+├── controlled-uncontrolled-pattern/
+├── ...
 
+🚀 Kurulum
 
-Her klasör:
-- Bağımsız bir Vite + React projesidir
-- Kendi içinde çalışır
-- Diğer projelerden bağımsızdır
+Projeyi klonladıktan sonra bağımlılıkları yükle:
 
----
-
-## 🚀 Kurulum
-
-Projeyi klonladıktan sonra:
-
-```bash
 npm install
 
 ▶️ Çalıştırma
+🔹 Workspace üzerinden çalıştırma
 
 Belirli bir pattern’i çalıştırmak için:
-npm run dev --workspace=container-presenter-pattern
 
-veya direkt app içine girerek:
+npm run dev -w container-presenter-pattern
+
+
+🔹 Direkt klasör üzerinden çalıştırma
+
+Alternatif olarak ilgili app’e girip çalıştırabilirsin:
 
 cd apps/container-presenter-pattern
 npm run dev
-
