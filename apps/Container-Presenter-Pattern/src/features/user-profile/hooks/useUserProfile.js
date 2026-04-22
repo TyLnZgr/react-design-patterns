@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { userProfileService } from "../services/userProfile.service";
+import { getUser, getPosts } from "@repo/api";
 
 export function useUserProfile(userId) {
   const [state, setState] = useState({
@@ -17,8 +17,8 @@ export function useUserProfile(userId) {
         setState((s) => ({ ...s, loading: true, error: null }));
 
         const [user, posts] = await Promise.all([
-          userProfileService.getUser(userId),
-          userProfileService.getPosts(userId),
+          getUser(userId),
+          getPosts(userId),
         ]);
 
         if (cancelled) return;

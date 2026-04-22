@@ -1,5 +1,4 @@
-import Error from "../../../shared/ui/Error";
-import Loading from "../../../shared/ui/Loading";
+import { Loading, Error } from "@repo/ui";
 import "./user-profile-presenter.css";
 
 function UserProfilePresenter({ user, posts, loading, error }) {
