@@ -1,9 +1,4 @@
-// import CarTracker from "./messy/CarTracker";
-// import BikeTracker from "./messy/BikeTracker";
-
-// import MouseTracker from "./with-pattern/MouseTracker";
-
-import MouseTrackerWithChildren from "./with-pattern/using-children/MouseTrackerWithChildren";
+import MouseTrackerWithChildren from "./Render-Prop-Pattern-Solution/withChildren";
 
 function App() {
   return (
