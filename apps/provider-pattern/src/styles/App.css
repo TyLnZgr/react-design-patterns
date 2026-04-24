@@ -1,0 +1,189 @@
+/* Light Theme Variables */
+.app.light {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --header-bg: #f8f9fa;
+  --border-color: #e9ecef;
+  --button-bg: #007bff;
+  --button-text: #ffffff;
+  --button-hover: #0056b3;
+  --code-bg: #f8f9fa;
+}
+
+/* Dark Theme Variables */
+.app.dark {
+  --bg-color: #1a1a1a;
+  --text-color: #ffffff;
+  --header-bg: #2d2d2d;
+  --border-color: #404040;
+  --button-bg: #61dafb;
+  --button-text: #282c34;
+  --button-hover: #21b4d6;
+  --code-bg: #2d2d2d;
+}
+
+/* Base Styles */
+.app {
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.app-header {
+  background-color: var(--header-bg);
+  padding: 2rem;
+  text-align: center;
+  border-bottom: 1px solid var(--border-color);
+  transition: background-color 0.3s ease;
+}
+
+.app-header h1 {
+  margin: 0 0 1rem 0;
+  font-size: 2.5rem;
+  color: var(--text-color);
+}
+
+.app-header p {
+  margin: 0 0 2rem 0;
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+.theme-toggle {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    transform 0.1s ease;
+}
+
+.theme-toggle:hover {
+  background-color: var(--button-hover);
+  transform: translateY(-2px);
+}
+
+.theme-toggle:active {
+  transform: translateY(0);
+}
+
+.app-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.pattern-explanation,
+.demo-section,
+.code-example {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background-color: var(--header-bg);
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-color);
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.pattern-explanation h2,
+.demo-section h2,
+.code-example h2 {
+  margin-top: 0;
+  color: var(--text-color);
+  border-bottom: 2px solid var(--button-bg);
+  padding-bottom: 0.5rem;
+}
+
+.pattern-explanation ul {
+  padding-left: 1.5rem;
+}
+
+.pattern-explanation li {
+  margin-bottom: 0.5rem;
+}
+
+.theme-info {
+  background-color: var(--code-bg);
+  padding: 1rem;
+  border-radius: 0.25rem;
+  border: 1px solid var(--border-color);
+  text-align: center;
+}
+
+.theme-info p {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.code-blocks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .code-blocks {
+    grid-template-columns: 1fr;
+  }
+}
+
+.code-block {
+  background-color: var(--code-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.code-block h3 {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  margin: 0;
+  padding: 1rem;
+  font-size: 1.1rem;
+}
+
+.code-block pre {
+  margin: 0;
+  padding: 1rem;
+  font-family: "Monaco", "Menlo", "Ubuntu Mono", monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app-header {
+    padding: 1rem;
+  }
+
+  .app-header h1 {
+    font-size: 2rem;
+  }
+
+  .app-main {
+    padding: 1rem;
+  }
+
+  .pattern-explanation,
+  .demo-section,
+  .code-example {
+    padding: 1rem;
+  }
+}
